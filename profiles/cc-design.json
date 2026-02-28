@@ -1,0 +1,26 @@
+{
+  "name": "cc-design",
+  "description": "設計模式 - UI/UX 設計、組件設計、視覺設計",
+  "tool": "cc",
+  "skills": [
+    "accessibility-compliance",
+    "context7",
+    "design-system-patterns",
+    "design-system-starter",
+    "gemini-iterative-review",
+    "interaction-design",
+    "loop-fix",
+    "mobile-android-design",
+    "mobile-ios-design",
+    "responsive-design",
+    "skill-installer",
+    "svg-icon-design",
+    "tailwind-design-system",
+    "visual-design-foundations",
+    "web-component-design"
+  ],
+  "plugins": [
+    "frontend-design@claude-plugins-official",
+    "obsidian-visual-skills@axton-obsidian-visual-skills"
+  ]
+}

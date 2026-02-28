@@ -1,0 +1,18 @@
+{
+    "name": "anti-design",
+    "description": "設計模式 - UI/UX 設計、組件設計、視覺設計",
+    "tool": "anti",
+    "skills": [
+        "ui-production",
+        "ui-quick",
+        "web-design-guidelines",
+        "cinematography-director",
+        "moyin-brand-guard",
+        "sp-frontend-design",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

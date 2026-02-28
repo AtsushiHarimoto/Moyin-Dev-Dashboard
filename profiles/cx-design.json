@@ -1,0 +1,23 @@
+{
+    "name": "cx-design",
+    "description": "設計模式 - UI/UX 設計、組件設計、視覺設計",
+    "tool": "cx",
+    "skills": [
+        "design-system-patterns",
+        "design-system-starter",
+        "tailwind-design-system",
+        "visual-design-foundations",
+        "interaction-design",
+        "responsive-design",
+        "accessibility-compliance",
+        "mobile-ios-design",
+        "mobile-android-design",
+        "svg-icon-design",
+        "web-component-design",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

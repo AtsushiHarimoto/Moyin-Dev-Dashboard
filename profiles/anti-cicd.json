@@ -1,0 +1,7 @@
+{
+    "name": "anti-cicd",
+    "complexity": 1,
+    "description": "Antigravity 持續集成模式 - CI/CD、部署流水線",
+    "tool": "anti",
+    "skills": []
+}

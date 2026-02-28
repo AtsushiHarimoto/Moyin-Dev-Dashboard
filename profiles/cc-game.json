@@ -1,0 +1,15 @@
+{
+  "name": "cc-game",
+  "complexity": 1,
+  "description": "Claude Code 遊戲開發模式 - 遊戲設計與開發相關",
+  "tool": "cc",
+  "skills": [
+    "context7",
+    "gemini-iterative-review",
+    "loop-fix",
+    "skill-installer"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "$schema": "https://schema.claude.ai/code/config/v1",
+  "meta": {
+    "version": "1.0.0",
+    "generatedAt": "2026-02-08T09:49:55Z",
+    "sourceOS": "win32",
+    "sourceHost": "Windows 11",
+    "projectPath": "D:\\AI-Novel-Projects\\Moyin",
+    "syncIntent": "cross-platform-config-sync",
+    "description": "Claude Code configuration snapshot for cross-platform synchronization. Target consumers should evaluate OS-specific implementations and propose adaptations."
+  },
+
+  "userSettings": {
+    "model": "sonnet",
+    "effortLevel": "medium",
+    "permissions": {
+      "allow": []
+    }
+  },
+
+  "plugins": {
+    "installed": [
+      {
+        "id": "superpowers@claude-plugins-official",
+        "version": "4.1.1",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "469a6d81ebb8b827e284d4afb090c6c622d97747",
+        "installedAt": "2026-01-28T14:09:17.179Z"
+      },
+      {
+        "id": "code-review@claude-plugins-official",
+        "version": "27d2b86d72da",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "b97f6eadd92917d0f8266309b74396b5a3c4f857",
+        "installedAt": "2026-01-17T17:40:05.818Z"
+      },
+      {
+        "id": "code-simplifier@claude-plugins-official",
+        "version": "1.0.0",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "2cd88e7947b7382e045666abee790c7f55f669f3",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      },
+      {
+        "id": "frontend-design@claude-plugins-official",
+        "version": "2cd88e7947b7",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "2cd88e7947b7382e045666abee790c7f55f669f3",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      },
+      {
+        "id": "rust-analyzer-lsp@claude-plugins-official",
+        "version": "1.0.0",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "2cd88e7947b7382e045666abee790c7f55f669f3",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      },
+      {
+        "id": "typescript-lsp@claude-plugins-official",
+        "version": "1.0.0",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "2cd88e7947b7382e045666abee790c7f55f669f3",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      },
+      {
+        "id": "obsidian-visual-skills@axton-obsidian-visual-skills",
+        "version": "3b64c5910f03",
+        "scope": "project",
+        "enabled": true,
+        "gitCommitSha": "3b64c5910f030d42104ffaef82a31529ea2a864c",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      },
+      {
+        "id": "kiro-spec-driven@kiro-marketplace",
+        "version": "1.0.0",
+        "scope": "user",
+        "enabled": true,
+        "gitCommitSha": "22577b636dc3095f774ace4c846034514d9fa071",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      },
+      {
+        "id": "documentation-generator@claude-code-templates",
+        "version": "1.0.0",
+        "scope": "user",
+        "enabled": false,
+        "gitCommitSha": "ee2a91549fdcb77e4bf42b4e503f372a95176917",
+        "installedAt": "2026-02-08T07:05:29.764Z"
+      }
+    ]
+  },
+
+  "hooks": {
+    "projectLevel": {
+      "Stop": [
+        {
+          "name": "Windows 任务完成通知",
+          "command": "node \"${CLAUDE_PROJECT_ROOT}/.claude/scripts/notify-task-complete.cjs\"",
+          "blocking": false,
+          "timeout": 5000,
+          "osSpecific": {
+            "platform": "win32",
+            "intent": "Send OS-native toast notification on session stop",
+            "dependencies": ["Node.js", "PowerShell"],
+            "implementation": "windows-toast-notification",
+            "macEquivalent": "osascript-notification-center",
+            "linuxEquivalent": "notify-send"
+          },
+          "scripts": [
+            {
+              "path": ".claude/scripts/notify-task-complete.cjs",
+              "type": "node",
+              "osSupport": ["win32"],
+              "content": "#!/usr/bin/env node\n/**\n * Windows 11 通知 Hook - Claude Code 任务完成通知\n * 在任务结束时发送 Windows Toast 通知\n */\n\nconst { execSync } = require('child_process');\nconst path = require('path');\n\n// 获取脚本目录\nconst scriptDir = __dirname;\nconst psScriptPath = path.join(scriptDir, 'notify-windows.ps1');\n\n// 获取环境变量或使用默认值\nconst sessionId = process.env.CLAUDE_SESSION_ID || 'unknown';\nconst timestamp = new Date().toLocaleString('zh-CN', {\n  hour12: false,\n  year: 'numeric',\n  month: '2-digit',\n  day: '2-digit',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// 构建通知内容\nconst title = 'Claude Code - 任务完成';\nconst message = `会话结束\\n时间: ${timestamp}`;\n\ntry {\n  // 执行 PowerShell 脚本\n  const psCommand = `powershell.exe -ExecutionPolicy Bypass -File \"${psScriptPath}\" -Title \"${title}\" -Message \"${message}\"`;\n\n  execSync(psCommand, {\n    stdio: 'inherit',\n    windowsHide: true\n  });\n\n  console.log('✓ Windows notification triggered');\n} catch (error) {\n  console.error('✗ Failed to send notification:', error.message);\n  // 不抛出错误，避免阻塞主流程\n}\n"
+            },
+            {
+              "path": ".claude/scripts/notify-windows.ps1",
+              "type": "powershell",
+              "osSupport": ["win32"],
+              "content": "# Windows 11 Toast Notification for Claude Code\nparam(\n    [string]$Title = \"Claude Code\",\n    [string]$Message = \"任务已完成\",\n    [string]$Icon = \"Info\"\n)\n\n# Load Windows Runtime assemblies for Toast notifications\n[Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] | Out-Null\n[Windows.Data.Xml.Dom.XmlDocument, Windows.Data.Xml.Dom.XmlDocument, ContentType = WindowsRuntime] | Out-Null\n\n# Define the toast template XML\n$ToastXml = @\"\n<toast>\n    <visual>\n        <binding template=\"ToastGeneric\">\n            <text>$Title</text>\n            <text>$Message</text>\n        </binding>\n    </visual>\n    <audio src=\"ms-winsoundevent:Notification.Default\" />\n</toast>\n\"@\n\n# Create XML document\n$XmlDocument = [Windows.Data.Xml.Dom.XmlDocument]::new()\n$XmlDocument.LoadXml($ToastXml)\n\n# Create the toast notification\n$Toast = [Windows.UI.Notifications.ToastNotification]::new($XmlDocument)\n\n# Show the notification using PowerShell as the app ID\n$AppId = '{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\WindowsPowerShell\\v1.0\\powershell.exe'\n[Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($AppId).Show($Toast)\n\nWrite-Host \"✓ Windows notification sent: $Title - $Message\"\n"
+            }
+          ],
+          "macOSEquivalent": {
+            "command": "osascript \"${CLAUDE_PROJECT_ROOT}/.claude/scripts/notify-task-complete.applescript\"",
+            "scriptTemplate": "display notification \"会话结束\\n时间: \" & (current date) with title \"Claude Code - 任务完成\" sound name \"default\""
+          },
+          "linuxEquivalent": {
+            "command": "notify-send 'Claude Code - 任务完成' '会话结束'",
+            "requiresPackage": "libnotify-bin"
+          }
+        }
+      ]
+    }
+  },
+
+  "mcp": {
+    "servers": {
+      "context7": {
+        "type": "http",
+        "url": "https://mcp.context7.com/mcp"
+      }
+    },
+    "notes": "Add mcpServers block to ~/.claude/settings.json on new devices. context7 uses HTTP remote, no API key required.",
+    "settingsJsonSnippet": {
+      "mcpServers": {
+        "context7": {
+          "type": "http",
+          "url": "https://mcp.context7.com/mcp"
+        }
+      }
+    }
+  },
+
+  "syncInstructions": {
+    "targetConsumer": "claude-code-instance",
+    "evaluationRequired": true,
+    "steps": [
+      "1. ANALYZE: Detect target OS platform (process.platform)",
+      "2. EVALUATE_PLUGINS: Check plugin availability and compatibility on target OS",
+      "3. EVALUATE_HOOKS: Identify OS-specific hooks and propose platform-native equivalents",
+      "4. PROPOSE_SYNC: Generate sync plan with OS-specific adaptations",
+      "5. USER_APPROVAL: Present plan to user for confirmation before execution",
+      "6. EXECUTE: Apply approved configurations with safety checks"
+    ],
+    "platformAdaptations": {
+      "hooks.Stop[0]": {
+        "intent": "OS-native notification on session stop",
+        "win32": "PowerShell Toast Notification (Windows.UI.Notifications)",
+        "darwin": "AppleScript display notification / osascript",
+        "linux": "notify-send (libnotify)"
+      }
+    },
+    "safetyChecks": [
+      "Verify plugin compatibility before installation",
+      "Test hook scripts in non-blocking mode first",
+      "Backup existing configuration before sync",
+      "Validate OS-specific dependencies availability"
+    ]
+  }
+}

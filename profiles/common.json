@@ -1,0 +1,23 @@
+{
+    "name": "common",
+    "description": "共通 skills 與 plugins - 無論切換到哪個 profile 都會保留",
+    "skills": {
+        "all": [
+            "moyin-plan",
+            "moyin-verify",
+            "moyin-evolve",
+            "moyin-spec-explore",
+            "skills-sync"
+        ],
+        "cx": [],
+        "cc": [],
+        "anti": []
+    },
+    "plugins": {
+        "cc": [],
+        "cx": [],
+        "anti": []
+    },
+    "note_skills": "all 中的 skills 對所有工具生效，cx/cc/anti 中的 skills 只對特定工具生效",
+    "note_plugins": "plugins 項目可為字串（所有平台）或物件 { id, platform }（限定平台）。切換 profile 時永遠保留"
+}

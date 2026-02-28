@@ -1,0 +1,31 @@
+{
+    "name": "cx-frontend-dev",
+    "description": "前端开发模式 - React/Vue 3、TypeScript、UI 组件",
+    "tool": "cx",
+    "skills": [
+        "react-dev",
+        "react-state-management",
+        "react-useeffect",
+        "nextjs-app-router-patterns",
+        "frontend-to-backend-requirements",
+        "frontend-design",
+        "web-component-design",
+        "accessibility-compliance",
+        "wcag-audit-patterns",
+        "screen-reader-testing",
+        "typescript-advanced-types",
+        "modern-javascript-patterns",
+        "tailwind-design-system",
+        "design-system-patterns",
+        "interaction-design",
+        "responsive-design",
+        "e2e-testing-patterns",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": [
+        "frontend-design@claude-plugins-official"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "anti-frontend-dev",
+    "description": "前端开发模式 - React/Vue 3、TypeScript、UI 组件",
+    "tool": "anti",
+    "skills": [
+        "react-dev",
+        "react-state-management",
+        "react-useeffect",
+        "nextjs-app-router-patterns",
+        "frontend-to-backend-requirements",
+        "vue",
+        "vue-expert",
+        "vueuse-functions",
+        "pinia",
+        "tanstack-query",
+        "vite",
+        "vitest",
+        "unocss",
+        "typescript-pro",
+        "e2e-testing-patterns",
+        "error-handling-patterns",
+        "moyin-brand-guard",
+        "react-performance",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

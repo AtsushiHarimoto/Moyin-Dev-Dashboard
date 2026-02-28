@@ -1,0 +1,27 @@
+{
+  "name": "cc-qa",
+  "complexity": 1,
+  "description": "Claude Code 測試模式 - QA、測試規劃與自動化",
+  "tool": "cc",
+  "skills": [
+    "accessibility-compliance",
+    "context7",
+    "e2e-testing-patterns",
+    "gemini-iterative-review",
+    "javascript-testing-patterns",
+    "loop-fix",
+    "python-testing-patterns",
+    "qa-test-planner",
+    "screen-reader-testing",
+    "skill-installer",
+    "systematic-debugging",
+    "test-driven-development",
+    "verification-loop",
+    "visual-regression-testing",
+    "vitest",
+    "webapp-testing"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official"
+  ]
+}

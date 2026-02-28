@@ -1,0 +1,32 @@
+{
+    "name": "cx-backend-dev",
+    "description": "后端开发模式 - API、数据库、服务端开发",
+    "tool": "cx",
+    "skills": [
+        "api-design-principles",
+        "database-schema-designer",
+        "architecture-patterns",
+        "backend-to-frontend-handoff-docs",
+        "async-python-patterns",
+        "error-handling-patterns",
+        "auth-implementation-patterns",
+        "nodejs-backend-patterns",
+        "fastapi-templates",
+        "database-migration",
+        "sql-optimization-patterns",
+        "microservices-patterns",
+        "cqrs-implementation",
+        "saga-orchestration",
+        "event-store-design",
+        "distributed-tracing",
+        "prometheus-configuration",
+        "dotnet-backend-patterns",
+        "temporal-python-testing",
+        "workflow-orchestration-patterns",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

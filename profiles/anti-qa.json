@@ -1,0 +1,19 @@
+{
+    "name": "anti-qa",
+    "description": "Antigravity 測試模式 - QA、測試規劃與自動化",
+    "tool": "anti",
+    "skills": [
+        "qa-test-planner",
+        "e2e-testing-patterns",
+        "visual-regression-testing",
+        "webapp-testing",
+        "javascript-testing-patterns",
+        "python-testing-patterns",
+        "test-driven-development",
+        "vitest",
+        "accessibility-compliance",
+        "screen-reader-testing",
+        "verification-loop",
+        "systematic-debugging"
+    ]
+}

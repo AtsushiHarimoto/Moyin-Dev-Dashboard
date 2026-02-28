@@ -1,0 +1,39 @@
+{
+  "name": "cc-backend-dev",
+  "description": "后端开发模式 - API、数据库、服务端开发",
+  "tool": "cc",
+  "skills": [
+    "api-design-principles",
+    "architecture-patterns",
+    "async-python-patterns",
+    "auth-implementation-patterns",
+    "backend-to-frontend-handoff-docs",
+    "context7",
+    "cqrs-implementation",
+    "database-migration",
+    "database-schema-designer",
+    "distributed-tracing",
+    "dotnet-backend-patterns",
+    "error-handling-patterns",
+    "event-store-design",
+    "fastapi-templates",
+    "gemini-iterative-review",
+    "loop-fix",
+    "microservices-patterns",
+    "nodejs-backend-patterns",
+    "postgresql",
+    "prometheus-configuration",
+    "python-performance-optimization",
+    "python-testing-patterns",
+    "saga-orchestration",
+    "skill-installer",
+    "sql-optimization-patterns",
+    "sp-systematic-debugging",
+    "sp-test-driven-development",
+    "temporal-python-testing",
+    "workflow-orchestration-patterns"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official"
+  ]
+}

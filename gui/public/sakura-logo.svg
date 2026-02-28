@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" aria-label="Moyin Factory Logo - Sakura Petal v5">
+  <defs>
+    <!-- 漸變：根部白→尖端深粉 -->
+    <linearGradient id="petalFill" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#fdf6f8"/>
+      <stop offset="15%" stop-color="#f8dce3"/>
+      <stop offset="35%" stop-color="#f0b8c8"/>
+      <stop offset="55%" stop-color="#e89bac"/>
+      <stop offset="75%" stop-color="#de8596"/>
+      <stop offset="100%" stop-color="#cf7080"/>
+    </linearGradient>
+
+    <!-- 根部白色高光 -->
+    <radialGradient id="rootWhite" cx="12%" cy="50%" r="25%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fdf6f8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 傾斜 -15 度 -->
+  <g transform="rotate(-15 60 30)">
+
+    <!--
+      杏仁形花瓣：
+      - 左端尖（根部）
+      - 中間飽滿，最寬處偏左
+      - 右端尖（尾端）
+      - 上緣較平，下緣較圓
+    -->
+    <path
+      d="M 5 30
+         Q 25 12, 60 10
+         Q 95 8, 115 30
+         Q 95 55, 60 52
+         Q 25 49, 5 30
+         Z"
+      fill="url(#petalFill)"
+    />
+
+    <!-- 根部白色 -->
+    <ellipse cx="25" cy="30" rx="22" ry="15" fill="url(#rootWhite)"/>
+
+    <!-- 紋路 -->
+    <g stroke="#d4899a" stroke-width="0.4" fill="none" opacity="0.2" stroke-linecap="round">
+      <path d="M 12 28 Q 50 22, 100 22"/>
+      <path d="M 14 34 Q 55 30, 102 30"/>
+      <path d="M 16 40 Q 55 38, 98 38"/>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+{
+    "name": "anti-prd",
+    "description": "產品需求模式 - PRD、技術文檔、Obsidian、架構圖",
+    "tool": "anti",
+    "skills": [
+        "requirements-clarity",
+        "design-phase-router",
+        "project-context-keeper",
+        "ask-questions-if-underspecified",
+        "doc-summary",
+        "code-summary",
+        "md-to-book",
+        "mermaid-visualizer",
+        "obsidian-canvas-creator",
+        "c4-architecture",
+        "architecture-decision-records",
+        "production-code-audit",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-novel-writer",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

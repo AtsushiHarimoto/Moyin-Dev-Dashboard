@@ -1,0 +1,15 @@
+{
+  "name": "cc-cicd",
+  "complexity": 1,
+  "description": "Claude Code 持續集成模式 - CI/CD、部署流水線",
+  "tool": "cc",
+  "skills": [
+    "context7",
+    "gemini-iterative-review",
+    "loop-fix",
+    "skill-installer"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official"
+  ]
+}

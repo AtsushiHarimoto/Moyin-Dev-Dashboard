@@ -1,0 +1,33 @@
+{
+  "name": "cc-review",
+  "description": "代码审查模式 - 专注于代码质量和最佳实践",
+  "tool": "cc",
+  "skills": [
+    "api-design-principles",
+    "architecture-decision-records",
+    "architecture-patterns",
+    "bash-defensive-patterns",
+    "code-review-excellence",
+    "commit-work",
+    "context7",
+    "debugging-strategies",
+    "error-handling-patterns",
+    "find-skills",
+    "gemini-iterative-review",
+    "git-advanced-workflows",
+    "javascript-testing-patterns",
+    "loop-fix",
+    "memory-forensics",
+    "memory-safety-patterns",
+    "naming-analyzer",
+    "openapi-spec-generation",
+    "react-state-management",
+    "skill-installer",
+    "typescript-advanced-types",
+    "typescript-best-practices"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official",
+    "code-review@claude-plugins-official"
+  ]
+}

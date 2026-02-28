@@ -1,0 +1,162 @@
+/* Moyin Brand Design Tokens: Neon Night Purple (霓虹夜紫) Edition */
+/* Inspired by Neon Violet Night from Moyin Game v1 */
+
+:root {
+  /* ========== 色彩系統 ========== */
+
+  /* 背景與表面 (Backgrounds & Surface) */
+  --color-bg-dark: #0f051a; /* 極深靛紫色 - Neon base */
+  --color-surface-dark: rgba(20, 10, 35, 0.85); /* 沉浸式紫色面板 */
+  --color-glass-bg: rgba(30, 15, 50, 0.6); /* 玻璃擬態背景 */
+  --color-glass-border: rgba(168, 85, 247, 0.4); /* 霓虹紫邊框 */
+
+  /* 霓虹紫系列 (Neon Purple/Sakura Series) */
+  --color-sakura-pink: #a855f7; /* 幻影紫 - 核心強調 */
+  --color-sakura-gradient: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+  --color-sakura-glow: rgba(168, 85, 247, 0.4);
+
+  /* 文字系統 (Typography Colors) */
+  --color-moonlight: #f3f0ff; /* 冷白/薰衣草白 - 文字主色 */
+  --color-morning-mist: #a78bfa; /* 淡薰衣草紫 - 次要文字 */
+  --color-cloud-mist: #6d5091; /* 深紫雲霧 - 提示文字 */
+
+  /* 延伸品牌色 (Extended Brand Colors) */
+  --color-mist-purple: #2d1b4e;
+  --color-petal-pink: #f472b6;
+  --color-twilight-purple: #1a0e2e;
+  --color-dark-purple: #0f051a;
+  --color-smoke-purple: #140a23;
+
+  /* ========== 字體系統 ========== */
+
+  --font-serif: "Noto Serif TC", "Source Han Serif TC", "思源宋體", serif;
+  --font-sans: "JF Open Huninn", "M PLUS Rounded 1c", "Inter", "Noto Sans TC", "system-ui", sans-serif;
+  --font-mono: "Cascadia Code", "JetBrains Mono", "Fira Code", monospace;
+
+  /* 字階 */
+  --font-size-h4: 20px;
+  --font-size-body: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-caption: 12px;
+
+  /* 字重 */
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Typography - line height */
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.25;
+
+  /* ========== 間距系統（8px 基準） ========== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* ========== 圓角 ========== */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* ========== 陰影與光暈 ========== */
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-sakura: color-mix(in srgb, var(--color-sakura-pink) 30%, transparent);
+
+  /* ========== 動效 ========== */
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* ============================================
+   Theme: Sakura (櫻花)
+   ============================================ */
+[data-theme="sakura"] {
+  --color-bg-dark: #fdeff4;
+  --color-surface-dark: rgba(255, 255, 255, 0.85);
+  --color-glass-bg: rgba(255, 255, 255, 0.4);
+  --color-glass-border: rgba(244, 114, 182, 0.3);
+  --color-sakura-pink: #f472b6;
+  --color-sakura-gradient: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%);
+  --color-sakura-glow: rgba(244, 114, 182, 0.4);
+  --color-moonlight: #3d1a24;
+  --color-morning-mist: #5a3040;
+  --color-cloud-mist: #a0798a;
+  --color-mist-purple: #f4cfe1;
+  --color-petal-pink: #ec4899;
+  --color-twilight-purple: #fff1f5;
+  --color-dark-purple: #fdeff4;
+  --color-smoke-purple: #fff7fb;
+}
+
+/* ============================================
+   Theme: Dark / Neon Violet (霓虹紫夜) — default
+   ============================================ */
+[data-theme="dark"] {
+  /* inherits :root — no overrides needed */
+}
+
+/* ============================================
+   Theme: Tokyo Night (東京夜)
+   ============================================ */
+[data-theme="tokyo-night"] {
+  --color-bg-dark: #1a1b26;
+  --color-surface-dark: rgba(36, 40, 59, 0.85);
+  --color-glass-bg: rgba(36, 40, 59, 0.7);
+  --color-glass-border: rgba(122, 162, 247, 0.3);
+  --color-sakura-pink: #7aa2f7;
+  --color-sakura-gradient: linear-gradient(135deg, #7aa2f7 0%, #bb9af7 100%);
+  --color-sakura-glow: rgba(122, 162, 247, 0.4);
+  --color-moonlight: #a9b1d6;
+  --color-morning-mist: #565f89;
+  --color-cloud-mist: #414868;
+  --color-mist-purple: #414868;
+  --color-petal-pink: #bb9af7;
+  --color-twilight-purple: #1f2335;
+  --color-dark-purple: #1a1b26;
+  --color-smoke-purple: #24283b;
+}
+
+/* ============================================
+   Theme: Hack Mode (黑客終端)
+   ============================================ */
+[data-theme="hack"] {
+  --color-bg-dark: #0d1117;
+  --color-surface-dark: rgba(22, 27, 34, 0.9);
+  --color-glass-bg: rgba(22, 27, 34, 0.9);
+  --color-glass-border: rgba(57, 211, 83, 0.5);
+  --color-sakura-pink: #00ff41;
+  --color-sakura-gradient: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
+  --color-sakura-glow: rgba(0, 255, 65, 0.4);
+  --color-moonlight: #c9d1d9;
+  --color-morning-mist: #3fcc5c;
+  --color-cloud-mist: #003b00;
+  --color-mist-purple: #21262d;
+  --color-petal-pink: #00ff41;
+  --color-twilight-purple: #0d1117;
+  --color-dark-purple: #0d1117;
+  --color-smoke-purple: #161b22;
+  --font-sans: "JetBrains Mono", "Cascadia Code", monospace;
+}
+
+/* ============================================
+   Theme: Eye Care (護眼模式)
+   ============================================ */
+[data-theme="eye-care"] {
+  --color-bg-dark: #f5f1e6;
+  --color-surface-dark: rgba(251, 247, 239, 0.85);
+  --color-glass-bg: rgba(251, 247, 239, 0.8);
+  --color-glass-border: rgba(140, 123, 117, 0.2);
+  --color-sakura-pink: #795548;
+  --color-sakura-gradient: linear-gradient(135deg, #8d6e63 0%, #795548 100%);
+  --color-sakura-glow: rgba(121, 85, 72, 0.3);
+  --color-moonlight: #5d4037;
+  --color-morning-mist: #8d6e63;
+  --color-cloud-mist: #bcaaa4;
+  --color-mist-purple: #d7ccc8;
+  --color-petal-pink: #a1887f;
+  --color-twilight-purple: #f0ebe0;
+  --color-dark-purple: #f5f1e6;
+  --color-smoke-purple: #efebe0;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "cc-frontend-dev",
+  "description": "前端开发模式 - React/Vue 3、TypeScript、UI 组件",
+  "tool": "cc",
+  "skills": [
+    "accessibility-compliance",
+    "backend-to-frontend-handoff-docs",
+    "context7",
+    "design-system-patterns",
+    "e2e-testing-patterns",
+    "frontend-to-backend-requirements",
+    "gemini-iterative-review",
+    "interaction-design",
+    "javascript-testing-patterns",
+    "loop-fix",
+    "modern-javascript-patterns",
+    "mui",
+    "nextjs-app-router-patterns",
+    "react-dev",
+    "react-modernization",
+    "react-native-architecture",
+    "react-native-design",
+    "react-performance",
+    "react-state-management",
+    "react-useeffect",
+    "responsive-design",
+    "screen-reader-testing",
+    "skill-installer",
+    "tailwind-design-system",
+    "typescript-advanced-types",
+    "typescript-best-practices",
+    "wcag-audit-patterns",
+    "web-component-design"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official",
+    "frontend-design@claude-plugins-official",
+    "typescript-lsp@claude-plugins-official"
+  ]
+}

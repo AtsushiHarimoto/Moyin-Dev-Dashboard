@@ -1,0 +1,26 @@
+{
+    "name": "cx-prd",
+    "description": "產品需求模式 - PRD、技術文檔、架構圖",
+    "tool": "cx",
+    "skills": [
+        "requirements-engineering",
+        "requirements-clarity",
+        "competitive-landscape",
+        "game-changing-features",
+        "market-sizing-analysis",
+        "data-storytelling",
+        "writing-clearly-and-concisely",
+        "crafting-effective-readmes",
+        "mermaid-diagrams",
+        "c4-architecture",
+        "excalidraw",
+        "draw-io",
+        "marp-slide",
+        "architecture-decision-records",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

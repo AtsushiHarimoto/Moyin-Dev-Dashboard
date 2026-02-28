@@ -1,0 +1,25 @@
+{
+  "name": "cx-review",
+  "description": "代码审查模式 - 专注于代码质量和最佳实践",
+  "tool": "cx",
+  "skills": [
+    "architecture-decision-records",
+    "error-handling-patterns",
+    "fetch-skill",
+    "find-skills",
+    "moyin-evolve",
+    "moyin-plan",
+    "moyin-spec-explore",
+    "moyin-verify",
+    "moyin-web-search",
+    "perplexity",
+    "project-context-keeper",
+    "review-spec",
+    "spec-to-code-compliance",
+    "typescript-best-practices",
+    ".system"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official"
+  ]
+}

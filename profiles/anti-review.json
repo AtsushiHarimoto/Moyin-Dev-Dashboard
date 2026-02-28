@@ -1,0 +1,17 @@
+{
+    "name": "anti-review",
+    "description": "代码审查模式 - 专注于代码质量和最佳实践",
+    "tool": "anti",
+    "skills": [
+        "architecture-decision-records",
+        "git-worktree-manager",
+        "verification-loop",
+        "project-context-keeper",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "visual-regression-testing",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}

@@ -1,0 +1,35 @@
+{
+  "name": "cc-prd",
+  "description": "產品需求模式 - PRD、技術文檔、Obsidian、架構圖",
+  "tool": "cc",
+  "skills": [
+    "architecture-decision-records",
+    "c4-architecture",
+    "competitive-landscape",
+    "context7",
+    "crafting-effective-readmes",
+    "data-storytelling",
+    "draw-io",
+    "excalidraw",
+    "find-skills",
+    "game-changing-features",
+    "gemini-iterative-review",
+    "loop-fix",
+    "market-sizing-analysis",
+    "marp-slide",
+    "mermaid-diagrams",
+    "moyin-novel-writer",
+    "obsidian",
+    "obsidian-canvas-creator",
+    "requirements-clarity",
+    "requirements-engineering",
+    "review-spec",
+    "skill-installer",
+    "spec-to-code-compliance",
+    "writing-clearly-and-concisely"
+  ],
+  "plugins": [
+    "superpowers@claude-plugins-official",
+    "obsidian-visual-skills@axton-obsidian-visual-skills"
+  ]
+}

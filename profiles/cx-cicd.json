@@ -1,0 +1,7 @@
+{
+    "name": "cx-cicd",
+    "complexity": 1,
+    "description": "Codex 持續集成模式 - CI/CD、部署流水線",
+    "tool": "cx",
+    "skills": []
+}

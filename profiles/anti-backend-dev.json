@@ -1,0 +1,23 @@
+{
+    "name": "anti-backend-dev",
+    "description": "後端開發模式 - API、數據庫、服務端開發",
+    "tool": "anti",
+    "skills": [
+        "api-design-principles",
+        "database-schema-designer",
+        "architecture-patterns",
+        "frontend-to-backend-requirements",
+        "async-python-patterns",
+        "error-handling-patterns",
+        "project-context-keeper",
+        "verification-loop",
+        "mcp-builder",
+        "sp-test-driven-development",
+        "sp-systematic-debugging",
+        "moyin-plan",
+        "moyin-verify",
+        "moyin-evolve",
+        "moyin-spec-explore"
+    ],
+    "plugins": []
+}
