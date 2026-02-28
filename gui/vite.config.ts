@@ -10,9 +10,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  optimizeDeps: {
-    exclude: ['@moyin/net-client'],
-  },
   server: {
     port: 38880,
     host: true,
@@ -23,7 +20,7 @@ export default defineConfig({
       },
     },
     fs: {
-      allow: ['..', '../../../common/moyin-net-client'],
+      allow: ['..'],
     },
   },
   build: {

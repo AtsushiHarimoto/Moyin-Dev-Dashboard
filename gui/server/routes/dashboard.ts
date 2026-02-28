@@ -10,7 +10,8 @@ import fs from 'fs-extra';
 import { WORKSPACE_ROOT, REPORTS_ROOT, encodePath } from '../utils';
 
 const router = express.Router();
-const PROFILES_DIR = path.join(WORKSPACE_ROOT, 'tools', 'skills-switch', 'profiles');
+const PROFILES_DIR = process.env.MOYIN_PROFILES_DIR
+  || path.join(WORKSPACE_ROOT, 'profiles');
 
 /**
  * GET /api/dashboard/stats

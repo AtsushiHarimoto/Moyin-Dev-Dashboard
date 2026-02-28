@@ -1,7 +1,7 @@
 {
-  "name": "@moyin/skills-switch-gui",
+  "name": "@moyin/dev-dashboard-gui",
   "version": "1.0.0",
-  "description": "Claude Code Skills Manager - Sakura Edition",
+  "description": "Moyin Dev Dashboard - Web GUI",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
@@ -23,7 +23,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@modelcontextprotocol/sdk": "^1.26.0",
-    "@moyin/net-client": "file:../../../common/moyin-net-client",
+    "@moyin/net-client": "^1.0.0",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
     "@tanstack/react-query": "^5.17.0",

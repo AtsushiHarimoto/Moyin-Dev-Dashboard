@@ -5,7 +5,7 @@
     "generatedAt": "2026-02-08T09:49:55Z",
     "sourceOS": "win32",
     "sourceHost": "Windows 11",
-    "projectPath": "D:\\AI-Novel-Projects\\Moyin",
+    "projectPath": "~/projects/your-project",
     "syncIntent": "cross-platform-config-sync",
     "description": "Claude Code configuration snapshot for cross-platform synchronization. Target consumers should evaluate OS-specific implementations and propose adaptations."
   },

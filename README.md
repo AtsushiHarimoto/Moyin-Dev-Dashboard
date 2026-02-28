@@ -132,7 +132,7 @@ npm install
 npm run dev:all
 
 # Or start individually:
-npm run dev      # Frontend on http://localhost:5173
+npm run dev      # Frontend on http://localhost:38880
 npm run server   # Backend on http://localhost:38881
 ```
 

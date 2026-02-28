@@ -20,7 +20,7 @@ export async function createHermitPurpleClient(): Promise<{ client: Client; tran
   });
 
   const client = new Client({
-    name: 'skills-switch-gui',
+    name: 'moyin-dev-dashboard',
     version: '1.0.0',
   });
 
@@ -70,11 +70,11 @@ export function killSharedTransport(): void {
  * up correctly so subsequent calls on the same client *usually* work,
  * but if the subprocess is truly stuck the stdio pipe may stall.
  *
- * TODO(I5): For long-running batch flows (keyword-presets, batch
- * analysis) consider recreating the MCP client after a timeout error
- * to guarantee a clean subprocess.  A full fix would require killing
- * the child process (transport.close()) and reconnecting, which the
- * callers in keyword-presets.ts / runner.ts would need to coordinate.
+ * Note: For long-running batch flows (keyword-presets, batch analysis),
+ * consider recreating the MCP client after a timeout error to guarantee
+ * a clean subprocess.  A full fix would require killing the child
+ * process (transport.close()) and reconnecting, which the callers in
+ * keyword-presets.ts / runner.ts would need to coordinate.
  */
 export async function callTool(
   client: Client,

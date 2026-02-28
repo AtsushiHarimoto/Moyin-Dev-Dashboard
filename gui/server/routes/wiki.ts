@@ -6,12 +6,17 @@ import { WORKSPACE_ROOT, encodePath } from '../utils';
 
 const router = express.Router();
 
-// 定義文檔根目錄
-const KNOWLEDGE_ROOT = path.join(WORKSPACE_ROOT, 'workspace', 'knowledge', '00_projects');
-const KNOWLEDGE_BASE_ROOT = path.join(WORKSPACE_ROOT, 'workspace', 'knowledge');
-const TOOLS_ROOT = path.join(WORKSPACE_ROOT, 'tools');
-const ISSUES_ROOT = path.join(WORKSPACE_ROOT, 'workspace', 'issues');
-const SKILLS_ALL_ROOT = path.join(WORKSPACE_ROOT, '.agent', 'skills-all');
+// 定義文檔根目錄 — all paths are configurable via environment variables.
+const KNOWLEDGE_ROOT = process.env.MOYIN_KNOWLEDGE_ROOT
+  || path.join(WORKSPACE_ROOT, 'knowledge', '00_projects');
+const KNOWLEDGE_BASE_ROOT = process.env.MOYIN_KNOWLEDGE_BASE_ROOT
+  || path.join(WORKSPACE_ROOT, 'knowledge');
+const TOOLS_ROOT = process.env.MOYIN_TOOLS_ROOT
+  || path.join(WORKSPACE_ROOT, 'tools');
+const ISSUES_ROOT = process.env.MOYIN_ISSUES_ROOT
+  || path.join(WORKSPACE_ROOT, 'issues');
+const SKILLS_ALL_ROOT = process.env.MOYIN_SKILLS_ALL_ROOT
+  || path.join(WORKSPACE_ROOT, '.agent', 'skills-all');
 
 console.log('📚 Wiki System Paths:');
 console.log('   Root:', WORKSPACE_ROOT);

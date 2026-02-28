@@ -16,7 +16,8 @@ export { parseSessionProvider };
 
 const router = express.Router();
 
-export const SAFE_EXPORT_ROOT = path.resolve(process.cwd(), 'workspace', 'output', 'skills-switch');
+export const SAFE_EXPORT_ROOT = process.env.MOYIN_EXPORT_ROOT
+  || path.resolve(process.cwd(), 'output');
 class InputValidationError extends Error {}
 
 export function sanitizeSessionIdForFilename(sessionId: string): string {
@@ -52,7 +53,7 @@ export function resolveOutputPath(userPath: unknown, defaultFilename: string): s
     : path.resolve(SAFE_EXPORT_ROOT, trimmedPath);
   const relative = path.relative(SAFE_EXPORT_ROOT, resolvedPath);
   if (relative.startsWith('..') || path.isAbsolute(relative)) {
-    throw new InputValidationError('Invalid output path: Must be within workspace/output/skills-switch');
+    throw new InputValidationError('Invalid output path: Must be within the configured export root');
   }
 
   if (fs.existsSync(resolvedPath) && fs.statSync(resolvedPath).isDirectory()) {

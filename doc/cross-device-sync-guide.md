@@ -223,24 +223,24 @@ git clone git@github.com:AtsushiHarimoto/Moyin.git
 cd Moyin
 ```
 
-### 4.4 Step 3: 安裝 skills-switch 依賴
+### 4.4 Step 3: 安裝 moyin-dev-dashboard 依賴
 
 ```bash
-cd tools/skills-switch
+cd moyin-dev-dashboard
 npm install
-cd ../..
+cd ..
 ```
 
-### 4.5 Step 4: 初始化 skills-switch
+### 4.5 Step 4: 初始化 moyin-dev-dashboard
 
 ```bash
-node tools/skills-switch/cli.js init
+node moyin-dev-dashboard/cli.js init
 ```
 
 ### 4.6 Step 5: 同步 Antigravity skills
 
 ```bash
-node tools/skills-switch/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 ```
 
 這會將 `~/.agents/skills-all/` 的內容複製到 `.agent/skills-all/`。
@@ -249,15 +249,15 @@ node tools/skills-switch/cli.js env-sync --reverse -t anti
 
 ```bash
 # 根據用途選擇 profile
-node tools/skills-switch/cli.js use cc-prd
-node tools/skills-switch/cli.js use cx-prd
-node tools/skills-switch/cli.js use anti-prd
+node moyin-dev-dashboard/cli.js use cc-prd
+node moyin-dev-dashboard/cli.js use cx-prd
+node moyin-dev-dashboard/cli.js use anti-prd
 ```
 
 ### 4.8 Step 7: 驗證
 
 ```bash
-node tools/skills-switch/cli.js status
+node moyin-dev-dashboard/cli.js status
 ```
 
 ## 5. 日常同步操作
@@ -287,10 +287,10 @@ cd ~/.agents && git pull
 
 # 同步 Antigravity
 cd <project-root>
-node tools/skills-switch/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 
 # 重新載入當前 profile（刷新 symlinks）
-node tools/skills-switch/cli.js use <current-profile>
+node moyin-dev-dashboard/cli.js use <current-profile>
 ```
 
 ### 5.3 衝突處理
@@ -347,7 +347,7 @@ claude plugins install pyright-lsp@claude-plugins-official
 | Windows | Junction | 否 |
 | macOS/Linux | Symlink | 否 |
 
-skills-switch 已自動處理平台差異，無需手動干預。
+moyin-dev-dashboard 已自動處理平台差異，無需手動干預。
 
 ### 6.4 路徑對照表
 
@@ -356,8 +356,8 @@ skills-switch 已自動處理平台差異，無需手動干預。
 | Claude 全域 | `%USERPROFILE%\.claude\` | `~/.claude/` |
 | Codex 全域 | `%USERPROFILE%\.agents\` | `~/.agents/` |
 | Antigravity | `<project>\.agent\` | `<project>/.agent/` |
-| skills-switch | `<project>\tools\skills-switch\` | `<project>/tools/skills-switch/` |
-| Profiles | `tools\skills-switch\profiles\` | `tools/skills-switch/profiles/` |
+| moyin-dev-dashboard | `<project>\moyin-dev-dashboard\` | `<project>/moyin-dev-dashboard/` |
+| Profiles | `moyin-dev-dashboard\profiles\` | `moyin-dev-dashboard/profiles/` |
 
 ## 7. `env-sync --reverse` 實作規格
 
@@ -425,9 +425,9 @@ for each tool in [cc, cx, anti]:
 # ─── 初始化（新設備） ───
 git clone git@github.com:AtsushiHarimoto/Moyin-Claude-skills-config.git ~/.claude
 git clone git@github.com:AtsushiHarimoto/Moyin-Codex-Skills-config.git ~/.agents
-cd <project> && node tools/skills-switch/cli.js init
-node tools/skills-switch/cli.js env-sync --reverse -t anti
-node tools/skills-switch/cli.js use cc-prd
+cd <project> && node moyin-dev-dashboard/cli.js init
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js use cc-prd
 
 # ─── 日常推送 ───
 cd ~/.claude && git add -A && git commit -m "update skills" && git push
@@ -436,9 +436,9 @@ cd ~/.agents && git add -A && git commit -m "update skills" && git push
 # ─── 日常拉取 ───
 cd ~/.claude && git pull
 cd ~/.agents && git pull
-cd <project> && node tools/skills-switch/cli.js env-sync --reverse -t anti
+cd <project> && node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 
 # ─── 狀態檢查 ───
-node tools/skills-switch/cli.js status
-node tools/skills-switch/cli.js list
+node moyin-dev-dashboard/cli.js status
+node moyin-dev-dashboard/cli.js list
 ```

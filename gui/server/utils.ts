@@ -9,11 +9,17 @@ import type { Response } from 'express';
 import type { Session, Message, SessionProvider } from './types';
 
 // ========== Centralized Workspace Root ==========
+// All paths are configurable via environment variables.
+// WORKSPACE_ROOT defaults to 3 levels above the gui/ directory (i.e. the monorepo root).
+// Override with MOYIN_WORKSPACE_ROOT to point at your project root.
 
-export const WORKSPACE_ROOT = path.resolve(fileURLToPath(import.meta.url), '..', '..', '..', '..', '..');
+export const WORKSPACE_ROOT = process.env.MOYIN_WORKSPACE_ROOT
+  || path.resolve(fileURLToPath(import.meta.url), '..', '..', '..');
 
 // 統一報告目錄：所有模組共用同一個 hermit-purple/reports 路徑
-export const REPORTS_ROOT = path.join(WORKSPACE_ROOT, 'tools', 'hermit-purple', 'reports');
+// Override with MOYIN_REPORTS_ROOT if your reports live elsewhere.
+export const REPORTS_ROOT = process.env.MOYIN_REPORTS_ROOT
+  || path.join(WORKSPACE_ROOT, 'reports');
 
 // ========== Path Encoding ==========
 

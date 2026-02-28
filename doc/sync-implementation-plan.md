@@ -175,7 +175,7 @@ echo ".codex/" >> .gitignore
 rm -rf .agent/skills-all/find-skills
 
 # 執行反向同步
-node tools/skills-switch/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 
 # 確認 find-skills 被從 ~/.agents/skills-all/ 複製回來
 ls .agent/skills-all/find-skills/
@@ -199,15 +199,15 @@ cd <project>
 git status
 # 應該不會顯示 .agent/skills-all/ 的任何變更
 
-# 確認 skills-switch 正常運作
-node tools/skills-switch/cli.js status
+# 確認 moyin-dev-dashboard 正常運作
+node moyin-dev-dashboard/cli.js status
 ```
 
 ### 5.4 Profile 切換驗證
 
 ```bash
-node tools/skills-switch/cli.js use cc-prd
-node tools/skills-switch/cli.js status
+node moyin-dev-dashboard/cli.js use cc-prd
+node moyin-dev-dashboard/cli.js status
 ```
 
 ---
@@ -329,7 +329,7 @@ Phase 6  跨設備同步（可選）
    安裝完成後，若需要同步到其他設備：
    1. cd ~/.claude && git add -A && git commit -m "add: <skill>" && git push
    2. cd ~/.agents && git add -A && git commit -m "add: <skill>" && git push
-   參考：tools/skills-switch/doc/cross-device-sync-guide.md
+   參考：doc/cross-device-sync-guide.md
 ```
 
 ### 6.3 同步更新 `~/.claude/skills-all/skill-installer/SKILL.md`
@@ -398,7 +398,7 @@ git push
 # 3. 同步 Antigravity（專案級，已在主專案 .gitignore 中排除）
 # 若有新 skill 需要同步到 .agent/skills-all/：
 cd <project>
-node tools/skills-switch/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 ```
 
 ### 場景 B：拉取（從遠端同步到本機）
@@ -414,10 +414,10 @@ cd ~/.agents && git pull
 
 # 3. 同步 Antigravity
 cd <project>
-node tools/skills-switch/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 
 # 4. 重新載入當前 profile（刷新 symlinks）
-node tools/skills-switch/cli.js use <current-profile>
+node moyin-dev-dashboard/cli.js use <current-profile>
 ```
 
 ### 場景 C：新設備初始化
@@ -436,15 +436,15 @@ git clone git@github.com:AtsushiHarimoto/Moyin-Codex-Skills-config.git .agents
 git clone git@github.com:AtsushiHarimoto/Moyin.git
 cd Moyin
 
-# 3. 安裝 skills-switch
-cd tools/skills-switch && npm install && cd ../..
+# 3. 安裝 moyin-dev-dashboard
+cd moyin-dev-dashboard && npm install && cd ..
 
 # 4. 初始化 + 同步 Antigravity
-node tools/skills-switch/cli.js init
-node tools/skills-switch/cli.js env-sync --reverse -t anti
+node moyin-dev-dashboard/cli.js init
+node moyin-dev-dashboard/cli.js env-sync --reverse -t anti
 
 # 5. 啟用 profile
-node tools/skills-switch/cli.js use cc-prd
+node moyin-dev-dashboard/cli.js use cc-prd
 ```
 
 若 ~/.claude/ 已被 Claude Code 自動建立，需先備份再合併：
@@ -472,14 +472,14 @@ rm -rf ~/.claude-backup
 cd ~/.claude && git status && git log --oneline -3
 cd ~/.agents && git status && git log --oneline -3
 
-# 查看 skills-switch 狀態
-node tools/skills-switch/cli.js status
+# 查看 moyin-dev-dashboard 狀態
+node moyin-dev-dashboard/cli.js status
 ```
 
 ## 參考文件
 
-- `tools/skills-switch/doc/cross-device-sync-guide.md` — 完整方案說明
-- `tools/skills-switch/doc/sync-implementation-plan.md` — 實作計劃
+- `doc/cross-device-sync-guide.md` — 完整方案說明
+- `doc/sync-implementation-plan.md` — 實作計劃
 ```
 
 ### 7.2 同步到全域
@@ -488,7 +488,7 @@ node tools/skills-switch/cli.js status
 
 ### 7.3 加入 common.json
 
-在 `tools/skills-switch/profiles/common.json` 的 `skills.all` 中新增 `"skills-sync"`：
+在 `profiles/common.json` 的 `skills.all` 中新增 `"skills-sync"`：
 
 ```json
 {

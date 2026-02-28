@@ -12,13 +12,13 @@
 Copy this `config/` directory to target machine:
 ```bash
 # On target machine
-cd /path/to/Moyin/tools/skills-switch/config
+cd /path/to/moyin-dev-dashboard/config
 ```
 
 ### Step 2: Execute Sync
 Open Claude Code on target machine and provide:
 ```
-读取 tools/skills-switch/config/claude-code-config.json 和 SYNC_INSTRUCTIONS.md，
+读取 config/claude-code-config.json 和 SYNC_INSTRUCTIONS.md，
 评估当前 OS 环境，生成同步方案，并等待我的确认。
 ```
 
