@@ -1,5 +1,7 @@
 # Moyin Dev Dashboard
 
+> **Languages:** [English](README.md) | [日本語](docs/README.ja.md) | [繁體中文](docs/README.zh-TW.md)
+
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6.svg)](https://www.typescriptlang.org/)
@@ -269,71 +271,3 @@ This project is part of [**Moyin Factory**](https://github.com/AtsushiHarimoto/M
 ## License
 
 [MIT](LICENSE) -- Copyright (c) 2025-2026 Atsushi Harimoto
-
----
-
-# 日本語
-
-## Moyin Dev Dashboard
-
-AI コーディングアシスタント（Claude Code、Codex、Antigravity）向けの**CLIプロファイルマネージャー**と、セッション分析・スキル管理・開発インサイトのための**React + Express Webダッシュボード**を組み合わせた、フルスタック開発者ワークフローダッシュボードです。
-
-### 主な機能
-
-- **プロファイルベースの設定管理** -- 3つのAIツール x 9モード = 28のJSONプロファイルで瞬時にコンテキスト切り替え
-- **クロスプラットフォーム同期** -- macOSとWindows間でスキル設定を双方向同期
-- **Webダッシュボード** -- React 18 + Express 5によるセッション分析、スキル管理、レポート生成
-- **3Dアバター** -- Three.js + React Three Fiberによるアニメーションアシスタント
-- **E2Eテスト** -- Playwrightによる品質保証
-
-### クイックスタート
-
-```bash
-# CLI ツール
-npm install
-node cli.js init
-node cli.js use cc-frontend-dev
-
-# Web ダッシュボード
-cd gui && npm install && npm run dev:all
-```
-
-### 技術スタック
-
-CLI: Node.js, Commander.js | フロントエンド: React 18, TypeScript, Vite, Zustand, Recharts, Three.js | バックエンド: Express 5, TypeScript, SQLite | テスト: Mocha, Vitest, Playwright
-
----
-
-# 繁體中文
-
-## Moyin Dev Dashboard
-
-結合 **CLI 設定檔管理器**（支援 Claude Code、Codex、Antigravity）與 **React + Express Web 儀表板**（提供工作階段分析、技能管理、開發洞察）的全端開發者工作流儀表板。
-
-### 主要功能
-
-- **基於設定檔的組態管理** -- 3 個 AI 工具 x 9 種模式 = 28 個 JSON 設定檔，實現即時情境切換
-- **跨平台同步** -- macOS 與 Windows 之間雙向同步技能設定
-- **Web 儀表板** -- React 18 + Express 5 驅動的工作階段分析、技能管理、報告產生
-- **3D 虛擬形象** -- Three.js + React Three Fiber 動畫助手
-- **E2E 測試** -- Playwright 品質保證
-
-### 快速開始
-
-```bash
-# CLI 工具
-npm install
-node cli.js init
-node cli.js use cc-frontend-dev
-
-# Web 儀表板
-cd gui && npm install && npm run dev:all
-```
-
-### 技術堆疊
-
-CLI: Node.js, Commander.js | 前端: React 18, TypeScript, Vite, Zustand, Recharts, Three.js | 後端: Express 5, TypeScript, SQLite | 測試: Mocha, Vitest, Playwright
-
----
-
-Built with TypeScript across the entire stack.
