@@ -15,7 +15,6 @@ const navItems: NavItem[] = [
   { id: 'dashboard', icon: 'dashboard', labelKey: 'sidebar.dashboard' },
   { id: 'progress', icon: 'trending_up', labelKey: 'sidebar.progress' },
   { id: 'skills-docs', icon: 'auto_stories', labelKey: 'sidebar.skillsDocs' },
-  { id: 'skills', icon: 'tune', labelKey: 'sidebar.skills' },
   { id: 'sessions', icon: 'history', labelKey: 'sidebar.sessions' },
   { id: 'reports', icon: 'tips_and_updates', labelKey: 'sidebar.reports' },
   { id: 'insights', icon: 'insights', labelKey: 'sidebar.insights' },

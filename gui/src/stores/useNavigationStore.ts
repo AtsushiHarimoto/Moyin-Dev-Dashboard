@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { createSafeStorage } from './safeStorage';
 
-export type NavigationMode = 'skills-docs' | 'dashboard' | 'progress' | 'skills' | 'sessions' | 'reports' | 'insights' | 'wiki' | 'knowledge' | 'issues' | 'settings';
+export type NavigationMode = 'skills-docs' | 'dashboard' | 'progress' | 'sessions' | 'reports' | 'insights' | 'wiki' | 'knowledge' | 'issues' | 'settings';
 
 export type ThemeId = 'dark' | 'sakura' | 'tokyo-night' | 'hack' | 'eye-care';
 
@@ -15,7 +15,7 @@ export const THEMES: { id: ThemeId; label: string; icon: string; primary: string
 ];
 
 export const DEFAULT_SIDEBAR_ORDER: NavigationMode[] = [
-  'dashboard', 'progress', 'skills-docs', 'skills', 'sessions',
+  'dashboard', 'progress', 'skills-docs', 'sessions',
   'reports', 'insights', 'issues', 'wiki', 'knowledge',
 ];
 
@@ -36,7 +36,7 @@ const safeStorage = createSafeStorage('NavigationStore');
 export const useNavigationStore = create<NavigationState>()(
   persist(
     (set) => ({
-      currentMode: 'skills',
+      currentMode: 'skills-docs',
       sidebarCollapsed: false,
       sidebarOrder: DEFAULT_SIDEBAR_ORDER,
       theme: 'dark',
@@ -59,6 +59,15 @@ export const useNavigationStore = create<NavigationState>()(
     {
       name: 'moyin-navigation-storage',
       storage: safeStorage,
+      version: 1,
+      migrate: (persistedState: unknown) => {
+        const s = persistedState as Record<string, unknown>;
+        if (s.currentMode === 'skills') s.currentMode = 'skills-docs';
+        if (Array.isArray(s.sidebarOrder)) {
+          s.sidebarOrder = (s.sidebarOrder as string[]).filter(m => m !== 'skills');
+        }
+        return s as unknown as NavigationState;
+      },
     }
   )
 );

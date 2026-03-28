@@ -46,7 +46,7 @@ describe('useNavigationStore', () => {
     useNavigationStore.getState().setMode('dashboard');
     expect(useNavigationStore.getState().currentMode).toBe('dashboard');
     // Reset
-    useNavigationStore.getState().setMode('skills');
+    useNavigationStore.getState().setMode('skills-docs');
   });
 
   it('should reset sidebar order', async () => {

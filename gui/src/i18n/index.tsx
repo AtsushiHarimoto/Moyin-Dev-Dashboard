@@ -12,7 +12,6 @@ const LOCALE_STORAGE_KEY = 'moyin.gui.locale';
 
 const messages: Record<Locale, Record<string, string>> = {
   'zh-TW': {
-    'sidebar.skills': 'Skills 配置',
     'sidebar.sessions': '會話歷史',
     'sidebar.reports': '資訊農場',
     'sidebar.wiki': '項目文檔庫',
@@ -20,10 +19,8 @@ const messages: Record<Locale, Record<string, string>> = {
     'sessions.title': 'Claude 會話歷史',
     'sessions.tabs.claude': 'Claude',
     'sessions.tabs.codex': 'Codex',
-    'sessions.tabs.antigravity': 'Antigravity',
     'sessions.provider.claude': 'Claude 歷史會話',
     'sessions.provider.codex': 'Codex 歷史會話',
-    'sessions.provider.antigravity': 'Antigravity 歷史會話',
     'sessions.provider.placeholder.title': '資料來源待接入',
     'sessions.provider.placeholder.desc': '此分頁版型已就緒，下一步接入歷史來源與同步邏輯。',
     'sessions.sync.disabled': '暫不可同步',
@@ -331,7 +328,6 @@ const messages: Record<Locale, Record<string, string>> = {
     'settings.about.techStack': '技術棧',
   },
   en: {
-    'sidebar.skills': 'Skills',
     'sidebar.sessions': 'Session History',
     'sidebar.reports': 'Info Farm',
     'sidebar.wiki': 'Project Wiki',
@@ -339,10 +335,8 @@ const messages: Record<Locale, Record<string, string>> = {
     'sessions.title': 'Claude Sessions',
     'sessions.tabs.claude': 'Claude',
     'sessions.tabs.codex': 'Codex',
-    'sessions.tabs.antigravity': 'Antigravity',
     'sessions.provider.claude': 'Claude Session History',
     'sessions.provider.codex': 'Codex Session History',
-    'sessions.provider.antigravity': 'Antigravity Session History',
     'sessions.provider.placeholder.title': 'Source Not Connected Yet',
     'sessions.provider.placeholder.desc': 'The layout is ready. Next step is to connect history source and sync logic.',
     'sessions.sync.disabled': 'Sync Unavailable',

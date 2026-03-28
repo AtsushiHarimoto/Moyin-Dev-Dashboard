@@ -1,7 +1,7 @@
 import { useI18n } from '../../i18n';
 import clsx from 'clsx';
 
-export type HistoryProvider = 'claude' | 'codex' | 'antigravity';
+export type HistoryProvider = 'claude' | 'codex';
 
 interface HistoryTabsProps {
   activeProvider: HistoryProvider;
@@ -11,7 +11,6 @@ interface HistoryTabsProps {
 const providers: Array<{ id: HistoryProvider; labelKey: string }> = [
   { id: 'claude', labelKey: 'sessions.tabs.claude' },
   { id: 'codex', labelKey: 'sessions.tabs.codex' },
-  { id: 'antigravity', labelKey: 'sessions.tabs.antigravity' },
 ];
 
 export function HistoryTabs({ activeProvider, onChange }: HistoryTabsProps) {

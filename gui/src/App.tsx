@@ -13,9 +13,6 @@ import { MobisWebGLAvatar } from './components/MobisWebGLAvatar';
 const SessionsManager = lazy(() =>
   import('./components/sessions/SessionsManager').then(m => ({ default: m.SessionsManager }))
 );
-const SkillsManager = lazy(() =>
-  import('./components/skills/SkillsManager').then(m => ({ default: m.SkillsManager }))
-);
 const ReportsManager = lazy(() =>
   import('./components/reports/ReportsManager').then(m => ({ default: m.ReportsManager }))
 );
@@ -99,8 +96,6 @@ export const App: React.FC = () => {
         return <Dashboard key="dashboard" />;
       case 'progress':
         return <ProgressView key="progress" />;
-      case 'skills':
-        return <SkillsManager key="skills" />;
       case 'sessions':
         return <SessionsManager key="sessions" />;
       case 'reports':

@@ -67,7 +67,7 @@ export function SessionsManager() {
            <h2 className="text-lg font-bold text-[var(--color-moonlight)] tracking-tight">{t('sessions.detail.title')}</h2>
            <button
              onClick={handleSync}
-             disabled={isSyncing || activeProvider === 'antigravity'}
+             disabled={isSyncing}
              className="text-cloud-mist hover:text-primary transition-colors disabled:opacity-30"
            >
              <span className={clsx("material-icons text-[20px]", isSyncing && "animate-spin")}>sync</span>
@@ -154,7 +154,7 @@ export function SessionsManager() {
         <div className="absolute bottom-8 right-8 z-40">
            <button
              onClick={handleSync}
-             disabled={isSyncing || activeProvider === 'antigravity'}
+             disabled={isSyncing}
              className="sakura-btn flex items-center gap-2.5 px-6 py-3 rounded-full font-bold group disabled:grayscale disabled:opacity-50"
            >
              <span className={clsx("material-icons text-lg transition-transform duration-500", isSyncing && "animate-spin")}>sync</span>

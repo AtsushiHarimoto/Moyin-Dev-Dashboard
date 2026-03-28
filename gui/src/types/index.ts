@@ -2,7 +2,7 @@
  * Claude Code 會話數據類型定義
  */
 
-export type SessionProvider = 'claude' | 'codex' | 'antigravity';
+export type SessionProvider = 'claude' | 'codex';
 
 /**
  * 會話元數據（對應 claude_sessions_win 表）

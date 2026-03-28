@@ -36,7 +36,6 @@ const NAV_META: Record<string, { icon: string; labelKey: string }> = {
   dashboard:     { icon: 'dashboard',        labelKey: 'sidebar.dashboard' },
   progress:      { icon: 'trending_up',      labelKey: 'sidebar.progress' },
   'skills-docs': { icon: 'auto_stories',     labelKey: 'sidebar.skillsDocs' },
-  skills:        { icon: 'tune',             labelKey: 'sidebar.skills' },
   sessions:      { icon: 'history',          labelKey: 'sidebar.sessions' },
   reports:       { icon: 'tips_and_updates', labelKey: 'sidebar.reports' },
   insights:      { icon: 'insights',         labelKey: 'sidebar.insights' },
