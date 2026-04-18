@@ -14,14 +14,14 @@ describe('route hardening helpers', () => {
 
   it('rejects traversal path outside SAFE_EXPORT_ROOT', () => {
     expect(() => resolveOutputPath('../../package.json', 'fallback.json')).toThrow(
-      'Invalid output path: Must be within workspace/output/skills-switch'
+      'Invalid output path: Must be within the configured export root'
     );
   });
 
   it('rejects absolute path outside SAFE_EXPORT_ROOT', () => {
     const outside = path.resolve(process.cwd(), 'package.json');
     expect(() => resolveOutputPath(outside, 'fallback.json')).toThrow(
-      'Invalid output path: Must be within workspace/output/skills-switch'
+      'Invalid output path: Must be within the configured export root'
     );
   });
 
@@ -40,8 +40,8 @@ describe('route hardening helpers', () => {
   });
 
   it('matches equivalent paths with platform-aware comparison', () => {
-    const a = path.resolve('workspace', 'output', 'skills-switch', 'x.json');
-    const b = path.join(process.cwd(), 'workspace', 'output', 'skills-switch', 'x.json');
+    const a = path.resolve('content', 'output', 'skills-switch', 'x.json');
+    const b = path.join(process.cwd(), 'content', 'output', 'skills-switch', 'x.json');
     expect(isSamePathByPlatform(a, b)).toBe(true);
   });
 

@@ -109,7 +109,7 @@ async function syncWiki(): Promise<{ projects: number; files: number }> {
     }
   }
 
-  // 3. Scan knowledge base (workspace/knowledge/01_xxx ~ xx_xxx, excluding 00_projects)
+  // 3. Scan knowledge base (knowledge/01_xxx ~ xx_xxx, excluding 00_projects)
   if (await fs.pathExists(KNOWLEDGE_BASE_ROOT)) {
     const entries = await fs.readdir(KNOWLEDGE_BASE_ROOT, { withFileTypes: true });
     for (const entry of entries) {
